@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CS @ SSA</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        var slideIndex = 1;
+        var slides = document.getElementsByClassName("slide");
+
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides() {
+        var i;
+        
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        if (slideIndex > slides.length) {slideIndex = 1}
+        else if(slideIndex < 1) {slideIndex = slides.length}
+        slides[slideIndex-1].style.display = "block"; 
+        }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="hcontainer">
+            <div class="logo">
+                <a href = "Home.html">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/Shady_Side_Academy_logo.svg/1200px-Shady_Side_Academy_logo.svg.png" alt="ssa logo" width="180">
+                </a>
+            </div>
+            <div class="institute"><h1><u>Shady Side</u><br>Academy</h1></div>
+            <div class="cs"><h1>Computer Science</h1> </div>
+        </div>
+    </div>
+    <main>
+    <!-- sidebar -->
+        <div class="sidebar">
+            <a class="active" href="#home">Home</a>
+            <button class="dropdown">Courses</button>
+            <div class="dropdown-container">
+                <a href="Untitled-2.html">Problem Solving</a>
+                <a href="#">Web Design</a>
+                <a href="#">Robotics</a>
+            </div>
+            <a href="#extracurriculars">Extracurriculars</a>
+            <div class="dropdown-container">
+                <a href="#">SSA Mobile</a>
+                <a href="#">Robotics Club</a>
+            </div>
+            <a href="#downloads">Downloads</a>
+            <div class="dropdown-container">
+                <a href="http://cs.shadysideacademy.org/cs.txt">SSA cs.jar</a>
+                <a href="https://netbeans.apache.org/download/index.html">Netbeans</a>
+            </div>
+            <a href="#about">About</a>
+            <div class="dropdown-container">
+                <a href="#">Faculty</a>
+                <a href="#">Facilities</a>
+            </div>
+        </div>
+    
+    <!-- list version of sidebar, in case it's useful someday
+        <div class="box sidebar">
+            <ul>
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#">Courses</a>
+                    <ul>
+                        <li><a href="#">Problem Solving</a></li>
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">Robotics</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Extracurriculars</a>
+                    <ul>
+                        <li><a href="#">Robotics</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Downloads</a>
+                    <ul>
+                        <li><a href="#">SSA cs.jar</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About</a>
+                    <ul>
+                        <li><a href="#">Faculty</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>-->
+
+    <!-- slideshow -->
+
+        <div class="slideshow box">
+            <div class="slide fade" id="start">
+                <img class="image" src="2.jpg" alt="glimcher">
+            </div>
+            <div class="slide fade">
+                <img class="image" src="3.jpg" alt="daniel">
+            </div>
+            <div class="slide fade">
+                <img class="image" src="4.jpg" alt="emily">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+        
+
+    <!-- Quote text -->
+
+        <div class="philosophy"> We strive to provide the fundamental preparation in computer science that 
+            will stimulate students’ growth in both academic and ethical areas and 
+            serve them well throughout their lives.</div>
+
+    <!-- Bottom boxes 
+            Links only work when hovering over image, but not when hovering over ribbon overlay -->
+
+        <div class="coding box">
+            <a href=#coding><img class="image" src="coding.jpg" alt="coding"></a>
+            <div class="label">Coding Practice</div>
+        </div> 
+        <div class="desc a">Explore collections of programming challenges to test your skills.</div>
+        <div class="scratch box">
+            <a href=#tbd><img class="image" src="1.png" alt="tbd"></a>
+            <div class="label">Uhhhhh</div>
+        </div>
+        <div class="desc b">I was going to recommend Scratch by MIT but it's honestly outdated.</div>
+        <div class="career box">
+            <a href=#career><img class="image" src="career.jpg" alt="career"></a>
+            <div class="label">Career</div>
+        </div>
+        <div class="desc c">Information for those considering pursuing a career in computer science.</div>
+    </main>
+
+<!-- Footer -->
+    
+</body>
+<footer>
+    <div class="footer">Made by Emily
+        <p>I've been learning CSS and HTML for a week now while making this website from scratch as I go. While mediocre in design and horribly coded, few would argue it's less pleasing than the current SSA CS website. I think it's time to update both the cs.ssa website and the web design course.</p>
+    </div>
+
+</footer>
+
+</html>
